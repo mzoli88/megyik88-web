@@ -183,6 +183,10 @@ export default {
           this.style_btn_text = "<< Következő >>";
           App.style = "style_colorfull";
           break;
+        case 18:
+          this.style_btn_text = "<< Következő >>";
+          App.style = "style_black";
+          break;
         default:
           App.style = "style_main";
           this.style_count = 15;
