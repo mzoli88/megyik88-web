@@ -66,21 +66,6 @@
 <script>
 export default {
   data: function () {
-    var m = [
-        "Január",
-        "Február",
-        "Március",
-        "Április",
-        "Május",
-        "Június",
-        "Július",
-        "Augusztus",
-        "Szeptember",
-        "Október",
-        "November",
-        "December",
-      ],
-      date = new Date();
     return {
       y: null,
       m: null,
@@ -110,6 +95,11 @@ export default {
     back: function () {
       this.$router.push("/");
     },
+    timer: function () {
+      this.validateDate();
+      clearTimeout(this.tmpTimer);
+      this.tmpTimer = setTimeout(this.timer, 1000);
+    },
     validateDate: function () {
       this.out_sec = false;
       this.errors = [];
@@ -129,13 +119,11 @@ export default {
         Msg.s("Boldog születésnapot!");
       if (y <= 1900) this.errors.push("Valaki nagyon öreg!");
       if (m < 1 || m > 12) this.errors.push('"' + m + '" - van ilyen hónap?');
-      if (!praseDate)
-        return this.errors.push("Nem létezik ilyen nap!");
+      if (!praseDate) return this.errors.push("Nem létezik ilyen nap!");
 
-      if (praseDate > now.getTime())
-        return this.errors.push("Időutazás?");
+      if (praseDate > now.getTime()) return this.errors.push("Időutazás?");
 
-      if(y<100)return; //Date.parse nem jó ha két karakterű a dátum
+      if (y < 100) return; //Date.parse nem jó ha két karakterű a dátum
 
       this.out_sec = Math.floor((now.getTime() - praseDate) / 1000);
       this.out_min = Math.floor(this.out_sec / 60);
@@ -146,11 +134,12 @@ export default {
       );
     },
   },
-  // beforeRouteLeave: function (to, from, next) {
-  //   if (this.out_sec == false) {
-  //     Msg.e("Nyuszi!");
-  //   }
-  //   next();
-  // },
+  activated: function () {
+    this.$nextTick(this.timer);
+  },
+  beforeRouteLeave: function (to, from, next) {
+    clearTimeout(this.tmpTimer);
+    next();
+  },
 };
 </script>
