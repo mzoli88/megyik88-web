@@ -1,6 +1,6 @@
 <template>
   <div class="hflex gap noPrint">
-    <div class="Box">
+    <Box>
       <div class="box_for_image">
         <div class="img_bg">
           <img
@@ -43,60 +43,49 @@
             </li>
             <li>Próbáld meg nyomtatni az oldalt (Ctrl + p)</li>
             <li>
-              Ez egy Vue Vue-ban készített "single-page" web alkalmazás.
-              Nevezhetjük az én kis személyes fejlesztői játszóteremnek.
+              Ez egy Vue-ban készített "single-page" web alkalmazás. Nevezhetjük
+              az én kis személyes fejlesztői játszóteremnek.
             </li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="Box">
-      <div class="BoxHeader">Változtassunk az oldal külsején</div>
-      <div class="BoxCt">
-        <div>
-          Nem tetszik a dizájn?
-          <span v-if="style_count == 0">Tudom, érdekes a szín választás.</span>
-          <span v-if="style_count >= 10">
-            Kattintások száma: {{ click_count }}
-          </span>
-        </div>
-        <ul>
-          <li>
-            <a v-if="!noLink" @click="changeStyle">{{ style_btn_text }}</a>
-          </li>
-        </ul>
+    </Box>
+    <Box title="Változtassunk az oldal külsején">
+      <div>
+        Nem tetszik a dizájn?
+        <span v-if="style_count == 0">Tudom, érdekes a szín választás.</span>
+        <span v-if="style_count >= 10">
+          Kattintások száma: {{ click_count }}
+        </span>
       </div>
-    </div>
-    <div class="Box">
-      <div class="BoxHeader">Matek a fiammal</div>
-      <div class="BoxCt">
-        Bizony a számítógép elé ültetem gyakorolni. Igy jár az, akinek
-        programozó az apja:
-        <ul>
-          <li>
-            <router-link v-if="!noLink" to="/math_2">
-              1. osztály v1.2
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="Box">
-      <div class="BoxHeader">Játék a születési dátummal</div>
-      <div class="BoxCt">
-        Készítettem egy kis dátum-idő kalkulátort, amivel részletes
-        információkat tudhatsz meg a korodról. Használhatod arra is, hogy
-        megnézd mióta dolgozol a jelenlegi munkahelyeden.
-        <br />
-        <ul>
-          <li>
-            <router-link v-if="!noLink" to="/age">
-              Link a játékhoz
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <ul>
+        <li>
+          <a v-if="!noLink" @click="changeStyle">{{ style_btn_text }}</a>
+        </li>
+      </ul>
+    </Box>
+    <Box title="Matek a fiammal">
+      Bizony a számítógép elé ültetem gyakorolni. Igy jár az, akinek programozó
+      az apja:
+      <ul>
+        <li>
+          <router-link v-if="!noLink" to="/math_2">
+            1. osztály v1.2
+          </router-link>
+        </li>
+      </ul>
+    </Box>
+    <Box title="Játék a születési dátummal">
+      Készítettem egy kis dátum-idő kalkulátort, amivel részletes információkat
+      tudhatsz meg a korodról. Használhatod arra is, hogy megnézd mióta dolgozol
+      a jelenlegi munkahelyeden.
+      <br />
+      <ul>
+        <li>
+          <router-link v-if="!noLink" to="/age"> Link a játékhoz </router-link>
+        </li>
+      </ul>
+    </Box>
   </div>
 </template>
 

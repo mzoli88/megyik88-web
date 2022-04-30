@@ -1,54 +1,8 @@
+
 @font-face{
 	font-family:"Font Awesome 5 Free";
 	src:url(fontawesome/fa-solid-900.woff);
 }
-.vflex,
-.hflex,
-.cflex {
-	display: flex;
-}
-.hflex {
-	flex-direction: column !important;
-}
-.vflex {
-	flex-direction: row !important;
-}
-.cflex {
-	justify-content: center;
-	align-items: center;
-}
-
-.gap {
-	gap: 20px;
-}
-
-.fit{
-	flex: 1 0 auto;
-}
-body,#app,#wrap{
-	height: 100vh;
-	overflow: hidden;
-	font-family: Verdana, sans-serif;
-	margin: 0;
-	padding:0;
-}
-h1{
-	margin: 0;
-	padding:0;
-}
-body{
-	background-color: #fff;
-}
-#app{
-	overflow:auto;
-	-webkit-overflow-scrolling: touch;
-	padding: 5px;
-}
-
-.icon {
-	font-family: "Font Awesome 5 Free";
-}
-
 .bHeader{
 	padding: 10px 14px;
 }
