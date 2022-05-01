@@ -5,7 +5,9 @@ import './plugins/fontawesome'
 import './plugins/fontawesome'
 import App from "./App.vue";
 
+// import './styles';
 import './styles/main.css';
+import './styles/style_black.css';
 
 import Box from './componets/Box.vue';
 Vue.component('Box', Box);
