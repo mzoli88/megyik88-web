@@ -1,0 +1,37 @@
+.toPrint {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    /* color: transparent; */
+    visibility: hidden;
+    margin: auto;
+    font-size: 20px;
+}
+
+@media print {
+
+    .noPrint {
+        display: none;
+    }
+
+    html,
+    body,
+    * {
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .toPrint {
+        color: white;
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+    }
+
+    @page {
+        margin: 0;
+    }
+
+}

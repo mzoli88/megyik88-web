@@ -1,0 +1,36 @@
+.style_colorfull .bHeader {
+    margin-left: 20px;
+}
+
+body.style_colorfull {
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
+    font-family: 'Fira Sans', sans-serif;
+    color: #4e4a67;
+}
+
+.style_colorfull .Box {
+    background: #fff;
+    box-shadow: 0px 14px 30px rgb(34 35 58 / 20%);
+    padding: 25px;
+    border-radius: 25px;
+    margin: 10px 20px;
+}
+
+.style_colorfull .megyik88_img {
+    border-radius: 20px;
+    position: absolute;
+    width: 160px;
+    left: -28px;
+    top: 22px;
+}
+
+.style_colorfull .img_bg {
+    width: 124px;
+    height: 350px;
+    float: left;
+}
+
+.style_colorfull .box_for_image {
+    margin-bottom: 0px;
+}

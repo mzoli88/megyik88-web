@@ -1,0 +1,46 @@
+body.style_apache {
+    background-color: #D8DBE2;
+}
+
+.style_apache .main_page {
+    border-width: 2px;
+    border-style: solid;
+}
+
+.style_apache .main_page {
+    border-color: #212738;
+    background-color: #FFFFFF;
+}
+
+.style_apache .bHeader * {
+    color: #092834;
+}
+
+.style_apache .sHeader {
+    min-height: 20px;
+    background-color: #347B98;
+}
+
+.style_apache .sHeader a {
+    color: #FFFFFF;
+}
+
+.style_apache .sHeader a:hover {
+    background-color: #DFF3FB;
+    color: #347B98;
+}
+
+.style_apache .Box {
+    background-color: #DFF3FB;
+    border-radius: 4px;
+}
+
+.style_apache .BoxHeader {
+    color: #F75802;
+}
+
+.style_apache .megyik88_img {
+    border: 5px solid #fff;
+    border-radius: 5%;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}

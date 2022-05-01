@@ -1,0 +1,16 @@
+@media (min-width: 1040px) {
+    .main_page {
+        margin: auto;
+        width: 1000px;
+    }
+
+    #msg {
+        left: 30vw;
+        padding: 20px;
+        width: 30vw;
+    }
+
+    .tmp_img {
+        width: initial;
+    }
+}
