@@ -65,6 +65,10 @@
         <label>☐ - 1 = 2</label>
         <input type="number" v-model.number="kivonas3" /> db.
       </div>
+      <div class="vflex gap">
+        <label>1 + 2 + 3 = 6</label>
+        <input type="number" v-model.number="osszeg4" /> db.
+      </div>
       <div class="Blue btn" @click="onStartBtn">Kezdés</div>
     </div>
   </div>
@@ -87,6 +91,7 @@ export default {
       osszeg1: 10,
       osszeg2: 0,
       osszeg3: 0,
+      osszeg4: 0,
       kivonas1: 10,
       kivonas2: 0,
       kivonas3: 0,
@@ -95,6 +100,26 @@ export default {
     };
   },
   methods: {
+    rand: function (min, max) {
+      return Math.round(Math.random() * (max - min) + min);
+    },
+    random: function (max) {
+      let tmp = [];
+      for (let i = 0; i < 5; i++) tmp.push(this.rand(0, max));
+
+      let shuffled = tmp
+        .sort()
+        .filter(function (item, pos, ary) {
+          return !pos || item != ary[pos - 1];
+        })
+        .map((value) => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
+      // console.log(shuffled);
+
+      return shuffled[this.rand(0, shuffled.length - 1)];
+    },
     generate: function () {
       if (this.jobs.length == 0) {
         this.summary = true;
@@ -102,50 +127,62 @@ export default {
       }
       switch (this.jobs.shift()) {
         case "osszeg1":
-          var sum = rando(this.max);
-          (a = rando(sum)), (b = sum - a);
+          var sum = this.random(this.max);
+          (a = this.random(sum)), (b = sum - a);
           this.job = a + "+" + b + "=" + "?";
           this.genNumberInput();
           break;
         case "osszeg2":
-          var sum = rando(this.max);
-          a = rando(sum);
+          var sum = this.random(this.max);
+          a = this.random(sum);
           this.job = a + "+?=" + sum;
           this.genNumberInput();
           break;
         case "osszeg3":
-          var sum = rando(this.max);
-          a = rando(sum);
+          var sum = this.random(this.max);
+          a = this.random(sum);
           this.job = "?+" + a + "=" + sum;
           this.genNumberInput();
           break;
         case "kivonas1":
-          var a = rando(this.max),
-            b = rando(a);
+          var a = this.random(this.max),
+            b = this.random(a);
           this.job = a + "-" + b + "=" + "?";
           this.genNumberInput();
           break;
         case "kivonas2":
-          var sum = rando(this.max);
-          a = rando(sum);
+          var sum = this.random(this.max);
+          a = this.random(sum);
           this.job = sum + "-?=" + a;
           this.genNumberInput();
         case "kivonas3":
-          var sum = rando(this.max);
-          (a = rando(sum)), (b = sum - a);
+          var sum = this.random(this.max);
+          (a = this.random(sum)), (b = sum - a);
           this.job = "?-" + a + "=" + b;
           this.genNumberInput();
           break;
         case "rel1":
-          this.job = rando(this.max) + "?" + rando(this.max);
+          this.job = this.random(this.max) + "?" + this.random(this.max);
           this.genRelInput();
+          break;
+        case "osszeg4":
+          var sum = this.random(this.max),
+            a,
+            b,
+            c;
+          a = this.random(sum);
+          sum = sum - a;
+          b = this.random(sum);
+          c = sum - b;
+          this.job = a + "+" + b + "+" + c + "=" + "?";
+          this.genNumberInput();
           break;
       }
     },
     genNumberInput: function () {
       this.inputs = [];
-      for (let i = 0; i < (this.max + 1); i++) {
-        console.log(i,this.max,i < this.max + 1);
+      for (let i = 0; i < this.max + 1; i++) {
+        // console.log(i, this.max, i < this.max + 1);
         this.inputs.push(i);
       }
     },
@@ -176,6 +213,7 @@ export default {
       for (i = 0; i != this.osszeg3; i++) this.jobs.push("osszeg3");
       for (i = 0; i != this.kivonas2; i++) this.jobs.push("kivonas2");
       for (i = 0; i != this.kivonas3; i++) this.jobs.push("kivonas3");
+      for (i = 0; i != this.osszeg4; i++) this.jobs.push("osszeg4");
 
       this.generate();
       this.running = true;

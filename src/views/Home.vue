@@ -70,7 +70,7 @@
       <ul>
         <li>
           <router-link v-if="!noLink" to="/math_2">
-            1. osztály v1.2
+            1. osztály v1.3
           </router-link>
         </li>
       </ul>

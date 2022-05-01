@@ -1,6 +1,5 @@
 
 import 'babel-polyfill';
-import './rando.js';
 import Vue from "vue";
 import './plugins/fontawesome'
 import './plugins/fontawesome'
