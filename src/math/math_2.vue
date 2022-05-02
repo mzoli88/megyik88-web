@@ -29,6 +29,11 @@
           </div>
         </div>
       </template>
+      <template v-else>
+        <div>
+          <div class="Blue btn" @click="reset">Kész!</div>
+        </div>
+      </template>
     </template>
     <div v-else class="hflex gap center">
       <label>Kérem, határozza meg típusonként a feladatok darabszámát!</label
@@ -103,9 +108,10 @@ export default {
     rand: function (min, max) {
       return Math.round(Math.random() * (max - min) + min);
     },
-    random: function (max) {
+    random: function (max, min) {
       let tmp = [];
-      for (let i = 0; i < 5; i++) tmp.push(this.rand(0, max));
+      min = min || 0;
+      for (let i = 0; i < 5; i++) tmp.push(this.rand(min, max));
 
       let shuffled = tmp
         .sort()
@@ -166,7 +172,7 @@ export default {
           this.genRelInput();
           break;
         case "osszeg4":
-          var sum = this.random(this.max),
+          var sum = this.random(this.max, this.max > 9 ? 5 : 0),
             a,
             b,
             c;
@@ -203,6 +209,10 @@ export default {
         this.bad++;
         //this.generate();
       }
+    },
+    reset: function () {
+      this.running = false;
+      this.summary = false;
     },
     onStartBtn: function () {
       var i;

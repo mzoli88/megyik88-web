@@ -54,7 +54,7 @@ export default {
     console.log("̄¯_(ツ)_/¯");
   },
   data: function name() {
-    document.body.className = document.body.className = "style_black";
+    document.body.className = document.body.className = "style_main";
     return {
       isIE: false || !!document.documentMode,
       menu_clicks: 0,
