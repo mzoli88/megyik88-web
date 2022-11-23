@@ -70,7 +70,22 @@
       <ul>
         <li>
           <router-link v-if="!noLink" to="/math_2">
-            1. osztály v1.3
+            1. osztály (v1.3)
+          </router-link>
+        </li>
+        <li>
+          <router-link v-if="!noLink" to="/math_3">
+            2. osztály - összadás, kivonás (könnyű) (v1.0)
+          </router-link>
+        </li>
+        <li>
+          <router-link v-if="!noLink" to="/math_3_2">
+            2. osztály - összadás, kivonás (nehéz) (v1.0)
+          </router-link>
+        </li>
+        <li>
+          <router-link v-if="!noLink" to="/math_4">
+            2. osztály - Sorbarendezés (v1.0)
           </router-link>
         </li>
       </ul>

@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Age from './views/Age.vue'
 import math_2 from './math/math_2.vue'
+import math_3 from './math/math_3.vue'
+import math_3_2 from './math/math_3_2.vue'
+import math_4 from './math/math_4.vue'
 
 Vue.use(Router)
 
@@ -24,6 +27,21 @@ export default new Router({
       path: '/math_2',
       name: 'math_2',
       component: math_2
+    },
+    {
+      path: '/math_3',
+      name: 'math_3',
+      component: math_3
+    },
+    {
+      path: '/math_3_2',
+      name: 'math_3_2',
+      component: math_3_2
+    },
+    {
+      path: '/math_4',
+      name: 'math_4',
+      component: math_4
     }
   ]
 })
