@@ -12,12 +12,11 @@
             <div class="Box">
               <div class="BoxHeader">Miért pont Internet Explorer?</div>
               <div class="BoxCt">
-                A te fajtád nehezíti meg az életem. Használd inkább ezt:
-                <a target="_blank" href="https://www.google.com/chrome/"
-                  >LINK</a
-                >
-                <br />I.E. alatt nem vagyok hajlandó megjeleneníteni rendes
-                tartalmat! (Kivéve, ha fizetnek.)
+                A te fajtád nehezíti meg a fejlesztők életét. Használd inkább az
+                alábbi böngészőt:
+                <a target="_blank" href="https://www.google.com/chrome/">
+                  LINK
+                </a>
               </div>
             </div>
           </template>
@@ -57,10 +56,6 @@ export default {
     document.body.className = document.body.className = "style_green";
     return {
       isIE: false || !!document.documentMode,
-      menu_clicks: 0,
-      menu_click_run: false,
-      menu_click_status: 0,
-      menu_canClick: true,
       showWrap: true,
       style: "style_green",
     };
@@ -70,51 +65,11 @@ export default {
       document.body.className = document.body.className = val;
     },
   },
-  methods: {
-    menu_click: function (e) {
-      var me = this;
-      this.menu_clicks++;
-      // log(this.menu_clicks, me.menu_click_status);
-      if (e.ctrlKey) {
-        Msg.s("Yeeee... nézd, megnyitottál egy új lapot!");
-        return;
-      }
-      if (!me.menu_canClick) return;
-      if (me.menu_clicks == 12) {
-        switch (me.menu_click_status) {
-          case 0:
-            Msg.i("Keresel valamit?");
-            break;
-          case 1:
-            Msg.i("Talán segítségre szorulsz?");
-            break;
-          case 2:
-            Msg.i("Tudom mi kell neked. Várj egy picit és átirányítalak...");
-            me.menu_canClick = false;
-            setTimeout(function () {
-              window.open("http://google.com/search?q=hogy+ne+legyek+hülye");
-              me.menu_canClick = true;
-            }, 4000);
-            break;
-          case 3:
-            Msg.i("Nem volt jó? Pedig nekem sokat segített!");
-            break;
-          default:
-            me.menu_click_status = -1;
-            break;
-        }
-        me.menu_clicks = 0;
-        me.menu_click_status++;
-      }
-      if (me.menu_click_run == false) {
-        me.menu_click_run = true;
-        setTimeout(function () {
-          me.menu_clicks = 0;
-          me.menu_click_run = false;
-        }, 5000);
-      }
-    },
-  },
+  // methods: {
+  //   menu_click: function (e) {
+  //     window.open("http://google.com/search?q=hogy+ne+legyek+hülye");
+  //   },
+  // },
   components: {
     mainMsg,
   },
