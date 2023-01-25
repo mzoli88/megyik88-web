@@ -33,6 +33,13 @@
             <li>
               Ez egy Vue-ban készített "single-page" web alkalmazás. Nevezhetjük
               az én kis személyes fejlesztői játszóteremnek
+              <a
+                class="smallLink"
+                target="_BLANK"
+                href="https://github.com/mzoli88/megyik88-web"
+              >
+                (https://github.com/mzoli88/megyik88-web)
+              </a>
             </li>
             <li>Nyomd meg az F11-es gombot</li>
             <li v-html="todayText"></li>
@@ -224,3 +231,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.smallLink {
+  font-size: 12px;
+}
+</style>
