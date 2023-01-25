@@ -1,0 +1,17 @@
+.style_simple * {
+    color: initial;
+    background-color: initial;
+    font-size: initial;
+    padding: initial;
+    margin: initial;
+    border-width: 0;
+    border: initial;
+    border-radius: initial;
+    float: initial;
+}
+
+
+.tmp_img {
+    width: 100%;
+    /* transform: scale(1.2); */
+}

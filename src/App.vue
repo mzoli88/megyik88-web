@@ -54,7 +54,7 @@ export default {
     console.log("̄¯_(ツ)_/¯");
   },
   data: function name() {
-    document.body.className = document.body.className = "style_main";
+    document.body.className = document.body.className = "style_green";
     return {
       isIE: false || !!document.documentMode,
       menu_clicks: 0,
@@ -62,7 +62,7 @@ export default {
       menu_click_status: 0,
       menu_canClick: true,
       showWrap: true,
-      style: "style_main",
+      style: "style_green",
     };
   },
   watch: {

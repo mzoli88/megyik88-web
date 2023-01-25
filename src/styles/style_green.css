@@ -1,0 +1,27 @@
+body.style_green {
+    background-color: #fdf6c0;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.style_green .bHeader,
+.style_green .a:hover,
+.style_green .BoxHeader {
+    text-shadow: 0px 0px 10px #c0c7fd;
+}
+
+.style_green .BoxHeader {
+    text-decoration: underline;
+}
+
+.style_green .Box {
+    background-color: #c8fdc0;
+    border-color: transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 8px 4px #21273847;
+    box-shadow: 0px 0px 8px 4px #21273847;
+}
+
+.style_green .megyik88_img {
+    -webkit-box-shadow: 0px 0px 8px 4px #21273847;
+    box-shadow: 0px 0px 8px 4px #21273847;
+}

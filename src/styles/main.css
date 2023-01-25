@@ -1,15 +1,17 @@
-
 .vflex,
 .hflex,
 .cflex {
 	display: flex;
 }
+
 .hflex {
 	flex-direction: column !important;
 }
+
 .vflex {
 	flex-direction: row !important;
 }
+
 .cflex {
 	justify-content: center;
 	align-items: center;
@@ -19,29 +21,40 @@
 	gap: 20px;
 }
 
-.fit{
+.fit {
 	flex: 1 0 auto;
 }
-body,#app,#wrap{
+
+body,
+#app,
+#wrap {
 	height: 100vh;
 	overflow: hidden;
 	font-family: Verdana, sans-serif;
 	margin: 0;
-	padding:0;
+	padding: 0;
 }
-h1{
+
+h1 {
 	margin: 0;
-	padding:0;
+	padding: 0;
 }
-body{
+
+body {
 	background-color: #fff;
 }
-#app{
-	overflow:auto;
+
+#app {
+	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	padding: 5px;
 }
 
 .icon {
 	font-family: "Font Awesome 5 Free";
+}
+
+.tmp_db_img {
+	display: block;
+	margin: auto;
 }

@@ -28,24 +28,15 @@
         </div>
       </div>
       <div class="BoxCt">
-        <br />
         <div>
-          Jó tudni:
           <ul>
-            <li v-html="todayText"></li>
-            <li>
-              Megvagy! Rögzítettem az IP címed. (Legalább is, ha az Apache
-              access log be van kapcsolva. Mind1, ha lesz időm akkor beállítom.)
-            </li>
-            <li>
-              Házassági évforduló: Október 20 Mondjuk ezt csak nekem kell nagyon
-              tudi. TODO: később Cron-t állítani, mert nem bízok a naptárban.
-            </li>
-            <li>Próbáld meg nyomtatni az oldalt (Ctrl + p)</li>
             <li>
               Ez egy Vue-ban készített "single-page" web alkalmazás. Nevezhetjük
-              az én kis személyes fejlesztői játszóteremnek.
+              az én kis személyes fejlesztői játszóteremnek
             </li>
+            <li>Nyomd meg az F11-es gombot</li>
+            <li v-html="todayText"></li>
+            <li>Nyomtasd ki ezt az oldalt (Ctrl + p)</li>
           </ul>
         </div>
       </div>
@@ -53,7 +44,7 @@
     <Box title="Változtassunk az oldal külsején">
       <div>
         Nem tetszik a dizájn?
-        <span v-if="style_count == 0">Tudom, érdekes a szín választás.</span>
+        <span v-if="style_count == 0">Hátha tudok segíteni.</span>
         <span v-if="style_count >= 10">
           Kattintások száma: {{ click_count }}
         </span>
@@ -192,7 +183,7 @@ export default {
           App.style = "style_black";
           break;
         default:
-          App.style = "style_main";
+          App.style = "style_green";
           this.style_count = 15;
           break;
       }
@@ -200,8 +191,7 @@ export default {
         var el = document.createElement("div");
         el.style.cssText =
           "position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:#fff";
-        el.innerHTML =
-          '<img class="tmp_img" src="pic/db.jpg" alt="db" style="display: block;margin: auto;">';
+        el.innerHTML = '<img class="tmp_db_img" src="pic/db.jpg" alt="db" >';
         el.className = "noselect";
         document.body.appendChild(el);
         App.showWrap = false;

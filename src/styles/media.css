@@ -14,3 +14,36 @@
         width: initial;
     }
 }
+
+@media all and (display-mode: fullscreen) {
+
+    body,
+    html,
+    #app {
+        background-color: #157fcc;
+    }
+
+    #app * {
+        display: none;
+    }
+
+    #app::before {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        content: ':(';
+        color: #fff;
+        font-size: 25.0vh;
+    }
+
+    #app::after {
+        position: absolute;
+        bottom: 40%;
+        left: 0;
+        padding: 0 20vh;
+        content: 'Your PC ran into a problem that it couldn\'t handle, and now it needs to restart.';
+        color: #fff;
+        font-size: 2.0vh;
+    }
+
+}
