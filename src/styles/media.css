@@ -41,9 +41,20 @@
         bottom: 40%;
         left: 0;
         padding: 0 20vh;
-        content: 'Your PC ran into a problem that it couldn\'t handle, and now it needs to restart.';
+        content: 'A számítógépe olyan problémába ütközött, amelyet nem tudott kezelni és most újra kell indítani.';
         color: #fff;
         font-size: 2.0vh;
     }
+
+    body::after {
+        position: absolute;
+        bottom: 30%;
+        left: 0;
+        padding: 0 20vh;
+        content: 'Vagy csak nyomd meg az F11-et :)';
+        color: #fff;
+        font-size: 1.5vh;
+    }
+
 
 }
