@@ -6,6 +6,7 @@ import math_2 from './math/math_2.vue'
 import math_3 from './math/math_3.vue'
 import math_3_2 from './math/math_3_2.vue'
 import math_4 from './math/math_4.vue'
+import math_5 from './math/math_5.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/math_4',
       name: 'math_4',
       component: math_4
+    },
+    {
+      path: '/math_5',
+      name: 'math_5',
+      component: math_5
     }
   ]
 })

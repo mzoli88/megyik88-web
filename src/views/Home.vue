@@ -86,6 +86,11 @@
             2. osztály - Sorbarendezés (v1.0)
           </router-link>
         </li>
+        <li>
+          <router-link v-if="!noLink" to="/math_5">
+            2. osztály - Kezdő szorzás (v1.0)
+          </router-link>
+        </li>
       </ul>
     </Box>
     <Box title="Játék a születési dátummal">

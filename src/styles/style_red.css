@@ -13,6 +13,10 @@ body.style_red {
     padding: 0;
 }
 
+.style_red .Box>* {
+    padding: 10px;
+}
+
 .style_red .BoxHeader {
     color: #fff;
     background-color: #c41717;
@@ -20,10 +24,6 @@ body.style_red {
     border-top-right-radius: 4px;
     padding: 8px;
     margin: 0;
-}
-
-.style_red .Box>.BoxCt {
-    padding: 10px;
 }
 
 .style_red .box_for_image .BoxHeader {
