@@ -13,6 +13,7 @@ import './styles/style_apache.css';
 import './styles/style_colorfull.css';
 import './styles/style_simple.css';
 import './styles/style_green.css';
+import './styles/style_red.css';
 import './styles/print.css';
 
 import Box from './componets/Box.vue';

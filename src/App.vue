@@ -4,7 +4,7 @@
     <div id="app" v-show="showWrap">
       <div class="main_page">
         <div class="bHeader noPrint">
-          <h1>megyik88.hu</h1>
+          <h1 class="site_name">megyik88.hu</h1>
         </div>
         <div class="sHeader noPrint"></div>
         <div class="content">
@@ -53,11 +53,11 @@ export default {
     console.log("̄¯_(ツ)_/¯");
   },
   data: function name() {
-    document.body.className = document.body.className = "style_green";
+    document.body.className = document.body.className = "style_red";
     return {
       isIE: false || !!document.documentMode,
       showWrap: true,
-      style: "style_green",
+      style: "style_red",
     };
   },
   watch: {
@@ -81,5 +81,22 @@ export default {
   color: green !important;
   font-size: 80px;
   margin: 40px;
+}
+
+.site_name {
+  animation: lights 20s 10s linear infinite;
+  text-decoration: none;
+}
+
+@keyframes lights {
+  0% {
+    text-shadow: -10px 5px 2px #33333300;
+  }
+  5% {
+    text-shadow: 0px 5px 2px #333333dd;
+  }
+  10% {
+    text-shadow: 15px 5px 2px #33333300;
+  }
 }
 </style>
