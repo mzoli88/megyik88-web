@@ -91,6 +91,11 @@
             2. osztály - Kezdő szorzás (v1.0)
           </router-link>
         </li>
+        <li>
+          <router-link v-if="!noLink" to="/jly">
+            2. osztály - Nyelvtan: Ly/j (v1.0)
+          </router-link>
+        </li>
       </ul>
     </Box>
     <Box title="Játék a születési dátummal">

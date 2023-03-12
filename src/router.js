@@ -7,6 +7,7 @@ import math_3 from './math/math_3.vue'
 import math_3_2 from './math/math_3_2.vue'
 import math_4 from './math/math_4.vue'
 import math_5 from './math/math_5.vue'
+import Jly from './math/Jly.vue'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/math_5',
       name: 'math_5',
       component: math_5
+    },
+    {
+      path: '/jly',
+      name: 'jly',
+      component: Jly
     }
   ]
 })
